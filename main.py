@@ -86,8 +86,7 @@ def tagMoviesParts(title):
 
 
 if __name__ == '__main__':
-    # link = sys.argv[1]
-    link = 'https://www.youtube.com/watch?v=AtQVOW9Y_pg'
+    link = sys.argv[1]
     title = saveYtMovieAndReturnFileName(link)
     cutFirst5sOfFileAndSave(title + ".mp3", title)
     tagMoviesParts(title)
