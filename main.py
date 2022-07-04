@@ -64,10 +64,11 @@ def moveMoviePartToEmotionFolder(file, emotion, title):
 
 
 def tagMoviesParts(title):
+    leng = len(os.listdir(title))
     print("\n\nTAGGING")
     i = 1
     for file in os.listdir(title):
-        print(f"part {i} of {len(os.listdir(title))}")
+        print(f"part {i} of {leng}")
         print("1-Angry, 2-Disgusted, 3-Fearful, 4-Happy, 5-Neutral, 6-Sad, 7-Surprised")
         playMp3File(f"{title}/{file}")
         while True:
@@ -91,4 +92,4 @@ if __name__ == '__main__':
     cutFirst5sOfFileAndSave(title + ".mp3", title)
     tagMoviesParts(title)
 
-    print("Downloaded")
+    print("Done")
